@@ -1,14 +1,13 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Inter } from 'next/font/google'
 import "./globals.css"
 
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Smart Cart - Compra Inteligente",
-  description: "Tu aplicación de compras inteligente",
-    generator: 'v0.dev'
+  title: "Smart Cart - Gestión Inteligente de Compras",
+  description: "Aplicación para gestionar tu presupuesto y comparar precios de supermercados",
 }
 
 export default function RootLayout({
