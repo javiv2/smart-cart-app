@@ -129,3 +129,7 @@ Agrega todas las variables del `.env` en el dashboard de Vercel.
 ## 📞 Soporte
 
 Para problemas o preguntas, abre un issue en el repositorio.
+
+# Smart Cart App
+
+Aplicación de compras inteligente con autenticación y más.
