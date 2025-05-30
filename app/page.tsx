@@ -1,62 +1,255 @@
+import React from 'react'
 import { ShoppingCart, TrendingUp, MapPin, Bell } from 'lucide-react'
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">Smart Cart</h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+    <div
+      style={{
+        minHeight: "100vh",
+        background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+        padding: "2rem",
+      }}
+    >
+      <div
+        style={{
+          maxWidth: "1200px",
+          margin: "0 auto",
+          color: "white",
+        }}
+      >
+        {/* Header */}
+        <div
+          style={{
+            textAlign: "center",
+            marginBottom: "4rem",
+          }}
+        >
+          <h1
+            style={{
+              fontSize: "3.5rem",
+              fontWeight: "bold",
+              marginBottom: "1.5rem",
+              textShadow: "2px 2px 4px rgba(0,0,0,0.3)",
+            }}
+          >
+            Smart Cart
+          </h1>
+          <p
+            style={{
+              fontSize: "1.25rem",
+              marginBottom: "2rem",
+              maxWidth: "600px",
+              margin: "0 auto 2rem auto",
+              opacity: "0.9",
+            }}
+          >
             Gestiona tu presupuesto de compras de forma inteligente y compara precios entre diferentes supermercados en
             Chile
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+          <div
+            style={{
+              display: "flex",
+              gap: "1rem",
+              justifyContent: "center",
+              flexWrap: "wrap",
+            }}
+          >
+            <button
+              style={{
+                backgroundColor: "#4f46e5",
+                color: "white",
+                padding: "0.75rem 2rem",
+                borderRadius: "0.5rem",
+                border: "none",
+                fontSize: "1rem",
+                fontWeight: "600",
+                cursor: "pointer",
+                boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
+                transition: "all 0.3s ease",
+              }}
+            >
               Comenzar Ahora
             </button>
-            <button className="border border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-3 rounded-lg font-semibold transition-colors">
+            <button
+              style={{
+                backgroundColor: "transparent",
+                color: "white",
+                padding: "0.75rem 2rem",
+                borderRadius: "0.5rem",
+                border: "2px solid white",
+                fontSize: "1rem",
+                fontWeight: "600",
+                cursor: "pointer",
+                transition: "all 0.3s ease",
+              }}
+            >
               Ver Demo
             </button>
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          <div className="bg-white p-6 rounded-xl shadow-lg">
-            <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-              <ShoppingCart className="w-6 h-6 text-blue-600" />
+        {/* Features Grid */}
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+            gap: "2rem",
+            marginBottom: "4rem",
+          }}
+        >
+          <div
+            style={{
+              backgroundColor: "white",
+              padding: "2rem",
+              borderRadius: "1rem",
+              boxShadow: "0 10px 25px rgba(0,0,0,0.1)",
+              color: "#1f2937",
+            }}
+          >
+            <div
+              style={{
+                width: "3rem",
+                height: "3rem",
+                backgroundColor: "#dbeafe",
+                borderRadius: "0.75rem",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                marginBottom: "1rem",
+              }}
+            >
+              <ShoppingCart style={{ width: "1.5rem", height: "1.5rem", color: "#3b82f6" }} />
             </div>
-            <h3 className="text-lg font-semibold mb-2">Lista de Compras</h3>
-            <p className="text-gray-600">Organiza tus compras y controla tu presupuesto</p>
+            <h3
+              style={{
+                fontSize: "1.25rem",
+                fontWeight: "600",
+                marginBottom: "0.5rem",
+              }}
+            >
+              Lista de Compras
+            </h3>
+            <p style={{ color: "#6b7280" }}>Organiza tus compras y controla tu presupuesto</p>
           </div>
 
-          <div className="bg-white p-6 rounded-xl shadow-lg">
-            <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-              <TrendingUp className="w-6 h-6 text-green-600" />
+          <div
+            style={{
+              backgroundColor: "white",
+              padding: "2rem",
+              borderRadius: "1rem",
+              boxShadow: "0 10px 25px rgba(0,0,0,0.1)",
+              color: "#1f2937",
+            }}
+          >
+            <div
+              style={{
+                width: "3rem",
+                height: "3rem",
+                backgroundColor: "#dcfce7",
+                borderRadius: "0.75rem",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                marginBottom: "1rem",
+              }}
+            >
+              <TrendingUp style={{ width: "1.5rem", height: "1.5rem", color: "#16a34a" }} />
             </div>
-            <h3 className="text-lg font-semibold mb-2">Comparación de Precios</h3>
-            <p className="text-gray-600">Encuentra los mejores precios en supermercados</p>
+            <h3
+              style={{
+                fontSize: "1.25rem",
+                fontWeight: "600",
+                marginBottom: "0.5rem",
+              }}
+            >
+              Comparación de Precios
+            </h3>
+            <p style={{ color: "#6b7280" }}>Encuentra los mejores precios en supermercados</p>
           </div>
 
-          <div className="bg-white p-6 rounded-xl shadow-lg">
-            <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-              <MapPin className="w-6 h-6 text-purple-600" />
+          <div
+            style={{
+              backgroundColor: "white",
+              padding: "2rem",
+              borderRadius: "1rem",
+              boxShadow: "0 10px 25px rgba(0,0,0,0.1)",
+              color: "#1f2937",
+            }}
+          >
+            <div
+              style={{
+                width: "3rem",
+                height: "3rem",
+                backgroundColor: "#f3e8ff",
+                borderRadius: "0.75rem",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                marginBottom: "1rem",
+              }}
+            >
+              <MapPin style={{ width: "1.5rem", height: "1.5rem", color: "#9333ea" }} />
             </div>
-            <h3 className="text-lg font-semibold mb-2">Tiendas Cercanas</h3>
-            <p className="text-gray-600">Localiza supermercados cerca de ti</p>
+            <h3
+              style={{
+                fontSize: "1.25rem",
+                fontWeight: "600",
+                marginBottom: "0.5rem",
+              }}
+            >
+              Tiendas Cercanas
+            </h3>
+            <p style={{ color: "#6b7280" }}>Localiza supermercados cerca de ti</p>
           </div>
 
-          <div className="bg-white p-6 rounded-xl shadow-lg">
-            <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-              <Bell className="w-6 h-6 text-orange-600" />
+          <div
+            style={{
+              backgroundColor: "white",
+              padding: "2rem",
+              borderRadius: "1rem",
+              boxShadow: "0 10px 25px rgba(0,0,0,0.1)",
+              color: "#1f2937",
+            }}
+          >
+            <div
+              style={{
+                width: "3rem",
+                height: "3rem",
+                backgroundColor: "#fed7aa",
+                borderRadius: "0.75rem",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                marginBottom: "1rem",
+              }}
+            >
+              <Bell style={{ width: "1.5rem", height: "1.5rem", color: "#ea580c" }} />
             </div>
-            <h3 className="text-lg font-semibold mb-2">Alertas de Precios</h3>
-            <p className="text-gray-600">Recibe notificaciones de ofertas</p>
+            <h3
+              style={{
+                fontSize: "1.25rem",
+                fontWeight: "600",
+                marginBottom: "0.5rem",
+              }}
+            >
+              Alertas de Precios
+            </h3>
+            <p style={{ color: "#6b7280" }}>Recibe notificaciones de ofertas</p>
           </div>
         </div>
 
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">¡Próximamente disponible!</h2>
-          <p className="text-gray-600">Estamos trabajando en traerte la mejor experiencia de compras inteligentes</p>
+        {/* Footer */}
+        <div style={{ textAlign: "center" }}>
+          <h2
+            style={{
+              fontSize: "2rem",
+              fontWeight: "bold",
+              marginBottom: "1rem",
+            }}
+          >
+            ¡Próximamente disponible!
+          </h2>
+          <p style={{ opacity: "0.9" }}>Estamos trabajando en traerte la mejor experiencia de compras inteligentes</p>
         </div>
       </div>
     </div>
