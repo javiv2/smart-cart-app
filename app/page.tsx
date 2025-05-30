@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from "next/link"
 import { ShoppingCart, TrendingUp, MapPin, Bell } from 'lucide-react'
 
 export default function Home() {
@@ -54,22 +55,24 @@ export default function Home() {
               flexWrap: "wrap",
             }}
           >
-            <button
-              style={{
-                backgroundColor: "#4f46e5",
-                color: "white",
-                padding: "0.75rem 2rem",
-                borderRadius: "0.5rem",
-                border: "none",
-                fontSize: "1rem",
-                fontWeight: "600",
-                cursor: "pointer",
-                boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
-                transition: "all 0.3s ease",
-              }}
-            >
-              Comenzar Ahora
-            </button>
+            <Link href="/dashboard" style={{ textDecoration: "none" }}>
+              <button
+                style={{
+                  backgroundColor: "#4f46e5",
+                  color: "white",
+                  padding: "0.75rem 2rem",
+                  borderRadius: "0.5rem",
+                  border: "none",
+                  fontSize: "1rem",
+                  fontWeight: "600",
+                  cursor: "pointer",
+                  boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
+                  transition: "all 0.3s ease",
+                }}
+              >
+                Ir al Dashboard
+              </button>
+            </Link>
             <button
               style={{
                 backgroundColor: "transparent",
@@ -247,9 +250,9 @@ export default function Home() {
               marginBottom: "1rem",
             }}
           >
-            ¡Próximamente disponible!
+            ¡Comienza a ahorrar hoy!
           </h2>
-          <p style={{ opacity: "0.9" }}>Estamos trabajando en traerte la mejor experiencia de compras inteligentes</p>
+          <p style={{ opacity: "0.9" }}>Gestiona tu presupuesto de forma inteligente con Smart Cart</p>
         </div>
       </div>
     </div>
